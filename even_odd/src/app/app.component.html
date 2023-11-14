@@ -1,0 +1,17 @@
+<app-main></app-main>
+<app-odd (oddNumber)="onOddNumber($event)"></app-odd>
+<app-even (evenNumber)="onEvenNumber($event)"></app-even>
+
+<div *ngIf="oddNumbers.length > 0">
+  <h3>Odd Numbers:</h3>
+  <ul>
+    <li *ngFor="let number of oddNumbers">{{ number }}</li>
+  </ul>
+</div>
+
+<div *ngIf="evenNumbers.length > 0">
+  <h3>Even Numbers:</h3>
+  <ul>
+    <li *ngFor="let number of evenNumbers">{{ number }}</li>
+  </ul>
+</div>
